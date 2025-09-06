@@ -6,8 +6,8 @@ const ProductCard = () => {
   return (
     <div className="border p-4 rounded-lg w-[220px] shadow-sm bg-white text-center hover:scale-[1.02] transition">
       <img
-        src="https://via.placeholder.com/220x130?text=Консерва"
-        alt="Product"
+        src=".Tushenka.png" // O'zgartirildi
+        alt="Конина тушеная Улан"
         className="mb-3 w-full h-auto"
       />
       <h3 className="text-sm font-medium mb-1">
@@ -42,8 +42,8 @@ const ProductCardWithCounter = () => {
   return (
     <div className="border p-4 rounded-lg w-[220px] shadow-sm bg-white text-center hover:scale-[1.02] transition">
       <img
-        src="https://via.placeholder.com/220x130?text=Консерва"
-        alt="Product"
+        src="/Tushenka.png" // O'zgartirildi
+        alt="Конина тушеная Улан"
         className="mb-3 w-full h-auto"
       />
       <h3 className="text-sm font-medium mb-1">
@@ -172,6 +172,7 @@ const Cart = () => {
           <div className="promotions-section">
             <h2>Свежие акции</h2>
             <div className="promotion-item">
+              <img src="/Tushenka.png" alt="Конная тушеная Улан" className="promotion-image" /> {/* Qo'shildi */}
               <h3>Конная тушеная Улан, есть возможность в 2 строки</h3>
               <p>В наличие: 11 кг.</p>
               <p>Все: 130гр</p>
@@ -182,6 +183,7 @@ const Cart = () => {
             </div>
             
             <div className="promotion-item">
+              <img src="/Tushenka.png" alt="Конная тушеная Улан" className="promotion-image" /> {/* Qo'shildi */}
               <h3>Конная тушеная Улан, есть возможность в 2 строки</h3>
               <p>В наличие: 11 кг.</p>
               <p>Все: 130гр</p>
@@ -253,6 +255,7 @@ const Cart = () => {
         <div className="view-all">
           <h2>Смотреть все</h2>
           <div className="promotion-item">
+            <img src="/Tushenka.png" alt="Конная тушеная Улан" className="promotion-image" /> {/* Qo'shildi */}
             <h3>Конная тушеная Улан, есть возможность в 2 строки</h3>
             <p>В наличие: 11 кг.</p>
             <p>Все: 130гр</p>
@@ -297,16 +300,45 @@ const App = () => {
   const [cartWeight, setCartWeight] = useState(2400);
 
   const newProducts = [
-    { name: "Конина тушеная Улан, есть возможность в 2 строки", stock: 11, weight: 130, price: 24320 },
-    { name: "Конина тушеная Улан, есть возможность в 2 строки", stock: 11, weight: 130, price: 24320 },
-    { name: "Конина тушеная Улан, есть возможность в 2 строки", stock: 11, weight: 130, price: 24320 },
-    { name: "Конина тушеная Улан, есть возможность в 2 строки", stock: 11, weight: 130, price: 24320 },
-    { name: "Конина тушеная Улан, есть возможность в 2 строки", stock: 11, weight: 130, price: 24320 },
+    { 
+      name: "Конина тушеная Улан, есть возможность в 2 строки", 
+      stock: 11, 
+      weight: 130, 
+      price: 24320,
+      image: "/Tushenka.png" // Qo'shildi
+    },
+    { 
+      name: "Конина тушеная Улан, есть возможность в 2 строки", 
+      stock: 11, 
+      weight: 130, 
+      price: 24320,
+      image: "/Tushenka.png" // Qo'shildi
+    },
+    { 
+      name: "Конина тушеная Улан, есть возможность в 2 строки", 
+      stock: 11, 
+      weight: 130, 
+      price: 24320,
+      image: "/Tushenka.png" // Qo'shildi
+    },
+    { 
+      name: "Конина тушеная Улан, есть возможность в 2 строки", 
+      stock: 11, 
+      weight: 130, 
+      price: 24320,
+      image: "/Tushenka.png" // Qo'shildi
+    },
+    { 
+      name: "Конина тушеная Улан, есть возможность в 2 строки", 
+      stock: 11, 
+      weight: 130, 
+      price: 24320,
+      image: "/Tushenka.png" // Qo'shildi
+    },
   ];
 
   const addToCart = () => {
     setCartCount(cartCount + 1);
-    // Bu yerda vaznni ham yangilash mumkin, lekin mahsulotga bog'liq
   };
 
   return (
@@ -346,8 +378,12 @@ const App = () => {
             </button>
           </div>
           <div className="hidden md:block">
-            {/* Bu yerda rasm bo'lishi mumkin */}
-            <div className="w-64 h-64 bg-white bg-opacity-20 rounded-full"></div>
+            {/* Rasm qo'shildi */}
+            <img 
+              src="/Tushenka.png" 
+              alt="Молочные продукты" 
+              className="w-64 h-64 object-cover rounded-full"
+            />
           </div>
         </div>
       </section>
@@ -358,9 +394,7 @@ const App = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-4 rounded-lg hover:bg-gray-100 cursor-pointer transition duration-300">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
+                <img src="/Tushenka.png" alt="Горячие блюда" className="w-8 h-8 object-cover" /> {/* O'zgartirildi */}
               </div>
               <h3 className="font-semibold">Горячие блюда</h3>
               <p className="text-sm text-gray-600 mt-1">Вкуснейшие блюда из 4 ресторанов</p>
@@ -368,9 +402,7 @@ const App = () => {
             
             <div className="text-center p-4 rounded-lg hover:bg-gray-100 cursor-pointer transition duration-300">
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
+                <img src="/Tushenka.png" alt="Новички" className="w-8 h-8 object-cover" /> {/* O'zgartirildi */}
               </div>
               <h3 className="font-semibold">Новички</h3>
               <p className="text-sm text-gray-600 mt-1">Новые позиции</p>
@@ -378,9 +410,7 @@ const App = () => {
             
             <div className="text-center p-4 rounded-lg hover:bg-gray-100 cursor-pointer transition duration-300">
               <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6a2 2 0 012-2zm5-3a2 2 0 11-4 0 2 2 0 014 0zm4 0a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                </svg>
+                <img src="/Tushenka.png" alt="Акции" className="w-8 h-8 object-cover" /> {/* O'zgartirildi */}
               </div>
               <h3 className="font-semibold">Акции</h3>
               <p className="text-sm text-gray-600 mt-1">Лучшие цены</p>
@@ -388,9 +418,7 @@ const App = () => {
             
             <div className="text-center p-4 rounded-lg hover:bg-gray-100 cursor-pointer transition duration-300">
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                </svg>
+                <img src="/Tushenka.png" alt="Комплекты" className="w-8 h-8 object-cover" /> {/* O'zgartirildi */}
               </div>
               <h3 className="font-semibold">Комплекты</h3>
               <p className="text-sm text-gray-600 mt-1">Все в одном</p>
@@ -407,6 +435,12 @@ const App = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {newProducts.map((product, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                {/* Rasm qo'shildi */}
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-4">
                   <h3 className="font-medium text-gray-800 mb-2 h-12 overflow-hidden">{product.name}</h3>
                   <div className="flex justify-between text-sm text-gray-600 mb-3">
